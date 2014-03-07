@@ -1,0 +1,277 @@
+import java.util.*;
+public class Test15_1
+{
+	
+	public static void main(String []args)
+	{
+		double x;
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Please enter the value of x");
+		x = input.nextDouble();
+		
+		A a = new A(x);
+		B b = new B(x);
+		C c = new C(x);
+		D d = new D(x);
+		E e = new E(x);
+		F f = new F(x);
+		G g = new G(x);
+		
+		System.out.println("The y value of x^2 is" +" " + a.f(x));
+		System.out.println("The y value of sin(x) is" + " " + b.f(x));
+		System.out.println("The y value of cos(x) is" + " "+c.f(x));
+		System.out.println("The y value of tan(x) is" +" " +d.f(x));
+		System.out.println("The y value of cos(x) + 5sin(x) is" +" "+ e.f(x));
+		System.out.println("The y value of 5cos(x) + sin(x) is" +" "+ f.f(x));
+		
+		System.out.println("The y value of log(x) + x^2 is " + g.f(x));
+		
+	}
+	
+	
+}
+class A extends AbstractDrawFunction {
+	double x;
+	double y;
+	A()
+	{
+		x = 0;
+	}
+	A(double x)
+	{
+		this.x = x;
+	}
+	double f(double x)
+	{
+		y = x * x;
+		return y;
+	}
+	double getX()
+	{
+		return x;
+	}
+	double getY()
+	{
+		return y;
+	}
+	void setX(double x)
+	{
+		this.x = x;
+	}
+	void setY(double y)
+	{
+		this.y = y;
+	}
+}
+class B extends AbstractDrawFunction{
+	double x;
+	double y;
+	B()
+	{
+		x = 0;
+	}
+	B(double x)
+	{
+		this.x = x;
+	}
+	double f (double x)
+	{
+		y = Math.sin(Math.toRadians(x));
+		return y;
+	}
+	double getX()
+	{
+		return x;
+	}
+	double getY()
+	{
+		return y;
+	}
+	void setX(double x)
+	{
+		this.x = x;
+	}
+	void setY(double y)
+	{
+		this.y = y;
+	}
+}
+class C extends AbstractDrawFunction{
+	double x;
+	double y;
+	C()
+	{
+		x = 0;
+	}
+	C(double x)
+	{
+		this.x = x;
+	}
+	double f (double x)
+	{
+		y = Math.cos(Math.toRadians(x));
+		return y;
+	}
+	double getX()
+	{
+		return x;
+	}
+	double getY()
+	{
+		return y;
+	}
+	void setX(double x)
+	{
+		this.x = x;
+	}
+	void setY(double y)
+	{
+		this.y = y;
+	}
+}
+class D extends AbstractDrawFunction{
+	double x;
+	double y;
+	D()
+	{
+		x = 0;
+	}
+	D(double x)
+	{
+		this.x = x;
+	}
+	double f (double x)
+	{
+		y = Math.tan(Math.toRadians(x));
+		return y;
+	}
+	double getX()
+	{
+		return x;
+	}
+	double getY()
+	{
+		return y;
+	}
+	void setX(double x)
+	{
+		this.x = x;
+	}
+	void setY(double y)
+	{
+		this.y = y;
+	}
+}
+class E extends AbstractDrawFunction{
+	double x;
+	double y;
+	E()
+	{
+		x = 0;
+	}
+	E(double x)
+	{
+		this.x = x;
+	}
+	double f (double x)
+	{
+		y = Math.cos(Math.toRadians(x)) + 5 * Math.sin(Math.toRadians(x));
+		return y;
+	}
+	double getX()
+	{
+		return x;
+	}
+	double getY()
+	{
+		return y;
+	}
+	void setX(double x)
+	{
+		this.x = x;
+	}
+	void setY(double y)
+	{
+		this.y = y;
+	}
+}
+class F extends AbstractDrawFunction{
+	double x;
+	double y;
+	F()
+	{
+		x = 0;
+	}
+	F(double x)
+	{
+		this.x = x;
+	}
+	double f (double x)
+	{
+		y = 5 * Math.cos(Math.toRadians(x)) + Math.sin(Math.toRadians(x));
+		return y;
+	}
+	double getX()
+	{
+		return x;
+	}
+	double getY()
+	{
+		return y;
+	}
+	void setX(double x)
+	{
+		this.x = x;
+	}
+	void setY(double y)
+	{
+		this.y = y;
+	}
+
+}
+class G extends AbstractDrawFunction{
+	double x;
+	double y;
+	G()
+	{
+		x = 0;
+	}
+	G(double x)
+	{
+		this.x = x;
+	}
+	double f (double x)
+	{
+		y = Math.log10(x) + x * x;
+		return y;
+	}
+	double getX()
+	{
+		return x;
+	}
+	double getY()
+	{
+		return y;
+	}
+	void setX(double x)
+	{
+		this.x = x;
+	}
+	void setY(double y)
+	{
+		this.y = y;
+	}
+
+}
+abstract class AbstractDrawFunction 
+{
+	
+	
+	abstract double f(double x);
+	
+	
+	
+}
+
+
