@@ -1,0 +1,48 @@
+import java.util.*;
+import javax.swing.JPanel;
+
+class a {
+
+}
+class b{
+	
+}
+class c{
+	
+}
+class d{
+	
+}
+class e{
+	
+}
+class f{
+	
+}
+class g{
+	
+}
+public abstract class AbstractDrawFunction extends JPanel
+{
+	private Polygon p = new Polygon();
+	
+	protected abstractDrawFunction ()
+	{
+		drawFunction();
+	}
+	abstract doublef(double x);
+	
+	public void drawFunction()
+	{
+		for(intx = -100; x <= 100; x++)
+		{
+			p.addPoint(x + 200,200 - (int)f(x));
+		}
+	}
+	
+	@Override
+	protected void paintComponent(Graphics g)
+	{
+		
+	}
+}
