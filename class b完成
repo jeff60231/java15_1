@@ -1,0 +1,108 @@
+import java.util.*;
+import javax.swing.JPanel;
+
+class a {
+	int x;
+	double y;
+	a()
+	{
+		x = 0;
+	}
+	a(int x)
+	{
+		this.x = x;
+	}
+	double calculateY(int x)
+	{
+		y = x * x;
+		return y;
+	}
+	int getX()
+	{
+		return x;
+	}
+	double getY()
+	{
+		return y;
+	}
+	void setX(int x)
+	{
+		this.x = x;
+	}
+	void setY(double y)
+	{
+		this.y = y;
+	}
+}
+class b{
+	int x;
+	double y;
+	b()
+	{
+		x = 0;
+	}
+	b(int x)
+	{
+		this.x = x;
+	}
+	double calculateY(int x)
+	{
+		y = Math.sin(Math.toRadians(x));
+		return y;
+	}
+	int getX()
+	{
+		return x;
+	}
+	double getY()
+	{
+		return y;
+	}
+	void setX(int x)
+	{
+		this.x = x;
+	}
+	void setY(double y)
+	{
+		this.y = y;
+	}
+}
+class c{
+	
+}
+class d{
+	
+}
+class e{
+	
+}
+class f{
+	
+}
+class g{
+	
+}
+public abstract class AbstractDrawFunction extends JPanel
+{
+	private Polygon p = new Polygon();
+	
+	protected abstractDrawFunction ()
+	{
+		drawFunction();
+	}
+	abstract doublef(double x);
+	
+	public void drawFunction()
+	{
+		for(intx = -100; x <= 100; x++)
+		{
+			p.addPoint(x + 200,200 - (int)f(x));
+		}
+	}
+	
+	@Override
+	protected void paintComponent(Graphics g)
+	{
+		
+	}
+}
